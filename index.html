@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Effective JavaScript: Frogger</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="modal fade" id="wonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header colored-back">
+                        <img src="images/happy.png" alt="" height="200" width="150"/>
+                        <h2 class="modal-title" >You Won</h2>
+                    </div>
+ 
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-default btn-lg restart pick-player white-color" data-dismiss="modal">Restart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="gameOverModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header colored-back">
+                        <img src="images/sad.png" alt="" height="200" width="150"/>
+                        <h2 class="modal-title" >You Lose </h2>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-default btn-lg restart pick-player white-color" data-dismiss="modal">Restart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header pick-player">
+                        <h2 class="modal-title" id="myModalLabel">Pick your player</h2>
+                    </div>
+                    <div class="modal-body">
+                        <img class="character" src="images/char-boy.png" alt="char-boy">
+                        <img class="character" src="images/char-pink-girl.png" alt="char-pink-girl">
+                        <img class="character" src="images/char-princess-girl.png" alt="char-princess-girl">
+                        <img class="character" src="images/char-cat-girl.png" alt="char-cat-girl">
+                        <ul id="levels"  class="mt-4 mb-4">
+                            <li  data-fullText='easy'> Easy </li>
+                            <li data-fullText="medium"> Medium </li>
+                            <li data-fullText="hard"> Hard </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/resources.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/engine.js"></script>
+        <script type="text/javascript"> $('#myModal').modal('show');
+
+        </script>
+    </body>
+</html>
